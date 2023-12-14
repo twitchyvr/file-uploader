@@ -3,10 +3,11 @@ document.getElementById('uploadButton').addEventListener('click', uploadFiles);
 function uploadFiles() {
     let files = document.getElementById('fileInput').files;
     const sasToken = "?sv=2023-01-03&st=2023-12-14T05%3A43%3A10Z&se=2123-12-15T05%3A43%3A00Z&sr=c&sp=racwlf&sig=Dx4U4UBMK%2BqY0kMBQIWpKwbZZRENrpxei4ulu%2F%2Fb9Ic%3D"; // Replace with your SAS token
+    const PrimaryKey = "NmDcAgw2PyGdAbooQwOXE6umc+TdtaWlJ2bu+uW9mhXNffo2CTT6q3ZbUUsbw+owpXrXdnfSbv0e+ASt+LzdRQ==";
     const storageAccountUrl = "https://tagpublicfilesupload.blob.core.windows.net/uploadedfiles";
 
     for (let file of files) {
-        let blobUrl = `${storageAccountUrl}/${file.name}?${sasToken}`;
+        let blobUrl = `${storageAccountUrl}/${file.name}?${PrimaryKey}`;
         uploadFileToBlob(file, blobUrl);
     }
 }
