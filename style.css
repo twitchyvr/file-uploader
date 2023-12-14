@@ -1,0 +1,24 @@
+.upload-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#progressContainer {
+    width: 100%;
+    background: #f1f1f1;
+    margin-top: 20px;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    background: #4caf50;
+    width: 0%;
+    border-radius: 5px;
+}
